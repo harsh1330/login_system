@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div style="margin: 1rem auto;">{{form.username.label}}
+                    {{form.username}}
+                </div>
+                <div style="margin: 1rem auto;">
+                    {{form.email.label}}
+                    {{form.email}}
+                </div>
+                <div style="margin: 1rem auto;">
+                    {{form.password1.label}}
+                    {{form.password1}}
+                </div>
+                <div style="margin: 1rem auto;">
+                    {{form.password2.label}}
+                    {{form.password2}}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
